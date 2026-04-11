@@ -1,0 +1,24 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.8.10'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.10'
+
+    id 'net.mamoe.mirai-console' version '2.16.0'
+}
+
+group = 'com.DaceFengBot.ArcadeQueue'
+version = '0.1.0'
+
+repositories {
+    maven { url 'https://maven.aliyun.com/repository/public' }
+    mavenCentral()
+}
+
+mirai {
+    jvmTarget JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    // Source: https://mvnrepository.com/artifact/net.mamoe/mirai-core-jvm
+    implementation 'net.mamoe:mirai-core-jvm:2.16.0'
+    implementation 'com.google.code.gson:gson:2.10.1'
+}
